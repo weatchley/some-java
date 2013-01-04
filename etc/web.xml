@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Development version of web.xml file -->
+
+<web-app>
+
+    <!-- Set up ******************************************** -->
+    <display-name>pka</display-name>
+    <description>
+        DrAlwes
+    </description>
+
+    <session-config>
+      <session-timeout>480</session-timeout>
+    </session-config>
+
+    <welcome-file-list>
+      <welcome-file>/index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Servlet config/mapping ******************************************** -->
+    <servlet>
+        <servlet-name>pka</servlet-name>
+        <servlet-class>net.paulinealwesnmd</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>pka</servlet-name>
+        <url-pattern>/pka</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>doClient</servlet-name>
+        <servlet-class>net.paulinealwesnmd.doClient</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>doClient</servlet-name>
+        <url-pattern>/doClient</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>MailingLabels</servlet-name>
+        <servlet-class>net.paulinealwesnmd.MailingLabels</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MailingLabels</servlet-name>
+        <url-pattern>/MailingLabels</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>doCal</servlet-name>
+        <servlet-class>net.paulinealwesnmd.doCal</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>doCal</servlet-name>
+        <url-pattern>/doCal</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>doVendor</servlet-name>
+        <servlet-class>net.paulinealwesnmd.doVendor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>doVendor</servlet-name>
+        <url-pattern>/doVendor</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- Environment Entries ******************************************** -->
+    <env-entry>
+      <env-entry-name>SystemName</env-entry-name>
+      <env-entry-value>Dr Pauline Alwes, NMD</env-entry-value>
+      <env-entry-type>java.lang.String</env-entry-type>
+    </env-entry>
+    <env-entry>
+      <env-entry-name>SystemAcronym</env-entry-name>
+      <env-entry-value>pka</env-entry-value>
+      <env-entry-type>java.lang.String</env-entry-type>
+    </env-entry>
+
+    <env-entry>
+      <env-entry-name>AppSchema</env-entry-name>
+      <env-entry-value>pka</env-entry-value>
+      <env-entry-type>java.lang.String</env-entry-type>
+    </env-entry>
+
+    <env-entry>
+      <env-entry-name>ProductionStatus</env-entry-name>
+      <env-entry-value>dev</env-entry-value>
+      <env-entry-type>java.lang.String</env-entry-type>
+    </env-entry>
+
+    <env-entry>
+      <env-entry-name>PathToRoot</env-entry-name>
+      <env-entry-value>C:\Program Files\Apache Software Foundation\Tomcat 6.0\webapps\ROOT</env-entry-value>
+      <env-entry-type>java.lang.String</env-entry-type>
+    </env-entry>
+
+</web-app>
